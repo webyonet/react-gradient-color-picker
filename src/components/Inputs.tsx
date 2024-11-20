@@ -33,7 +33,7 @@ const Input = ({
     <div style={{ width: width }}>
       <input
         value={temp}
-        id="rbgcp-input"
+        className="rbgcp-input"
         onChange={(e) => onChange(e)}
         style={{ ...defaultStyles.rbgcpInput }}
         // className="rbgcp-input"
@@ -79,7 +79,7 @@ const HexInput = ({ opacity }: { opacity: number }) => {
         value={newHex}
         onBlur={hexBlur}
         onFocus={hexFocus}
-        id="rbgcp-hex-input"
+        className="rbgcp-hex-input"
         onChange={(e) => handleHex(e)}
         style={{ ...defaultStyles.rbgcpInput, ...defaultStyles.rbgcpHexInput }}
       />
@@ -238,7 +238,7 @@ const Inputs = () => {
         justifyContent: 'space-between',
         ...defaultStyles.rbgcpInputsWrap,
       }}
-      id="rbgcp-inputs-wrap"
+      className="rbgcp-inputs-wrap"
     >
       {inputType !== 'cmyk' && <HexInput opacity={hc?.a} />}
       {inputType === 'hsl' && <HSLInputs />}

@@ -40,7 +40,7 @@ const ColorTypeBtns = ({
       >
         <div
           onClick={setSolid}
-          id="rbgcp-solid-btn"
+          className="rbgcp-solid-btn"
           style={colorTypeBtnStyles(!isGradient, defaultStyles)}
           // className="rbgcp-control-btn rbgcp-solid-btn"
         >
@@ -48,7 +48,7 @@ const ColorTypeBtns = ({
         </div>
         <div
           onClick={setGradient}
-          id="rbgcp-gradient-btn"
+          className="rbgcp-gradient-btn"
           style={colorTypeBtnStyles(isGradient ?? false, defaultStyles)}
           // className="rbgcp-control-btn rbgcp-gradient-btn"
         >
@@ -214,7 +214,7 @@ const Controls = ({
               {!hideEyeDrop && <EyeDropper onSelect={handleChange} />}
               {!hideAdvancedSliders && (
                 <div
-                  id="rbgcp-advanced-btn"
+                  className="rbgcp-advanced-btn"
                   onClick={() => setOpenAdvanced(!openAdvanced)}
                   // className="rbgcp-control-btn rbgcp-advanced-btn"
                   style={controlBtnStyles(openAdvanced, defaultStyles)}
@@ -227,14 +227,14 @@ const Controls = ({
                   style={controlBtnStyles(openComparibles, defaultStyles)}
                   onClick={() => setOpenComparibles(!openComparibles)}
                   // className="rbgcp-control-btn rbgcp-comparibles-btn"
-                  id="rbgcp-comparibles-btn"
+                  className="rbgcp-comparibles-btn"
                 >
                   <PaletteIcon color={openComparibles ? '#568CF5' : ''} />
                 </div>
               )}
               {!hideInputType && (
                 <div
-                  id="rbgcp-color-model-btn"
+                  className="rbgcp-color-model-btn"
                   onClick={() => setOpenInputType(!openInputType)}
                   // className="rbgcp-control-btn rbgcp-color-model-btn"
                   style={controlBtnStyles(openInputType, defaultStyles)}

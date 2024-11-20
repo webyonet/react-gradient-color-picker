@@ -30,7 +30,7 @@ const Picker = ({
   const { isGradient } = usePicker()
 
   return (
-    <div style={{ userSelect: 'none' }} id="rbgcp-wrapper">
+    <div style={{ userSelect: 'none' }} className="rbgcp-wrapper">
       <Square />
       {!hideControls && (
         <Controls

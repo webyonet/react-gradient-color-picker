@@ -14,7 +14,6 @@ const TrashIcon = () => {
   }
   return (
     <svg
-      id="Layer_1"
       data-name="Layer 1"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 20 20"
@@ -42,7 +41,6 @@ export const LinearIcon = ({ color }: ColorProps) => {
   }
   return (
     <svg
-      id="Layer_1"
       data-name="Layer 1"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 20 20"
@@ -73,7 +71,6 @@ export const RadialIcon = ({ color }: ColorProps) => {
   }
   return (
     <svg
-      id="Layer_1"
       data-name="Layer 1"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 20 20"
@@ -117,7 +114,6 @@ export const SlidersIcon = ({ color }: ColorProps) => {
 
   return (
     <svg
-      id="Layer_1"
       data-name="Layer 1"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 20 20"
@@ -209,7 +205,6 @@ export const InputsIcon = ({ color }: ColorProps) => {
   }
   return (
     <svg
-      id="Layer_1"
       data-name="Layer 1"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 20 20"
@@ -259,7 +254,6 @@ export const PaletteIcon = ({ color }: ColorProps) => {
   }
   return (
     <svg
-      id="Layer_1"
       data-name="Layer 1"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 20 20"
@@ -325,7 +319,6 @@ export const DegreesIcon = ({ color }: { color?: string }) => {
   }
   return (
     <svg
-      id="Layer_1"
       data-name="Layer 1"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 20 20"
@@ -358,7 +351,6 @@ export const StopIcon = () => {
 
   return (
     <svg
-      id="Layer_1"
       data-name="Layer 1"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 20 20"

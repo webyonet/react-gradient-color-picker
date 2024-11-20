@@ -114,7 +114,7 @@ const Square = () => {
         >
           <canvas
             ref={canvas}
-            id="paintSquare"
+            className="paintSquare"
             // className="rbgcp-canvas"
             width={`${squareWidth}px`}
             height={`${squareHeight}px`}

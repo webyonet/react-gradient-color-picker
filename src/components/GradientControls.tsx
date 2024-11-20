@@ -28,7 +28,7 @@ const GradientType = () => {
     <div style={defaultStyles.rbgcpControlBtnWrapper}>
       <div
         onClick={handleLinear}
-        id="rbgcp-linear-btn"
+        className="rbgcp-linear-btn"
         // className="rbgcp-control-icon-btn rbgcp-linear-btn"
         style={{
           ...defaultStyles.rbgcpControlBtn,
@@ -44,7 +44,7 @@ const GradientType = () => {
       </div>
       <div
         onClick={handleRadial}
-        id="rbgcp-radial-btn"
+        className="rbgcp-radial-btn"
         // className="rbgcp-control-icon-btn rbgcp-radial-btn"
         style={{
           ...defaultStyles.rbgcpControlBtn,
@@ -82,7 +82,7 @@ const StopPicker = () => {
       <StopIcon />
       <input
         value={currentLeft}
-        id="rbgcp-stop-input"
+        className="rbgcp-stop-input"
         onChange={(e) => handleMove(e.target.value)}
         style={{
           ...defaultStyles.rbgcpControlInput,
@@ -115,7 +115,7 @@ const DegreePicker = () => {
       <DegreesIcon />
       <input
         value={degrees}
-        id="rbgcp-degree-input"
+        className="rbgcp-degree-input"
         onChange={(e) => handleDegrees(e)}
         // className="rbgcp-control-input rbgcp-degree-input"
         style={{
@@ -160,7 +160,7 @@ const DeleteBtn = () => {
     <div
       onClick={deletePoint}
       style={{ ...controlBtnStyles(false, defaultStyles), width: 28 }}
-      id="rbgcp-point-delete-btn"
+      className="rbgcp-point-delete-btn"
       // className="rbgcp-control-btn rbgcp-point-delete-btn"
       tabIndex={0}
       role="button"
@@ -192,7 +192,7 @@ const GradientControls = ({
         justifyContent: 'space-between',
         paddingLeft: hideGradientType ? 4 : 0,
       }}
-      id="rbgcp-gradient-controls-wrap"
+      className="rbgcp-gradient-controls-wrap"
       // className="rbgcp-gradient-controls-wrap"
     >
       {!hideGradientType && <GradientType />}

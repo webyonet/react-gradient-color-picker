@@ -54,7 +54,7 @@ export const Handle = ({
       // tabIndex={0}
       // onBlur={handleBlur}
       // onFocus={handleFocus}
-      id={`gradient-handle-${i}`}
+      className={`gradient-handle-${i}`}
       onMouseDown={(e) => handleDown(e)}
       // className="rbgcp-gradient-handle-wrap"
       style={{
@@ -166,7 +166,7 @@ const GradientBar = () => {
         marginBottom: 4,
         position: 'relative',
       }}
-      id="gradient-bar"
+      className="gradient-bar"
       // className="rbgcp-gradient-bar"
     >
       <div
