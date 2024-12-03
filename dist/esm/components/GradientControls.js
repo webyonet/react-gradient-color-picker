@@ -56,7 +56,7 @@ var DegreePicker = function () {
     var handleDegrees = function (e) {
         var newValue = formatInputValues(e.target.value, 0, 360);
         var remaining = value.split(/,(.+)/)[1];
-        onChange("linear-gradient(".concat(newValue !== null && newValue !== void 0 ? newValue : 0, "deg, ").concat(remaining));
+        onChange("linear-gradient(".concat(newValue || 0, "deg, ").concat(remaining));
     };
     return (React.createElement("div", { 
         // className="rbgcp-degree-input-wrap"
