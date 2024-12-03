@@ -48,11 +48,11 @@ var GradientType = function () {
     var isRadial = gradientType === 'radial-gradient';
     var handleLinear = function () {
         var remaining = value.split(/,(.+)/)[1];
-        onChange("linear-gradient(90deg, ".concat(remaining));
+        onChange("linear-gradient(90deg, ".concat(remaining === null || remaining === void 0 ? void 0 : remaining.trim()));
     };
     var handleRadial = function () {
         var remaining = value.split(/,(.+)/)[1];
-        onChange("radial-gradient(circle, ".concat(remaining));
+        onChange("radial-gradient(circle, ".concat(remaining === null || remaining === void 0 ? void 0 : remaining.trim()));
     };
     return (react_1.default.createElement("div", { style: defaultStyles.rbgcpControlBtnWrapper },
         react_1.default.createElement("div", { onClick: handleLinear, className: "rbgcp-linear-btn", 
@@ -84,13 +84,13 @@ var DegreePicker = function () {
     var handleDegrees = function (e) {
         var newValue = (0, formatters_js_1.formatInputValues)(e.target.value, 0, 360);
         var remaining = value.split(/,(.+)/)[1];
-        onChange("linear-gradient(".concat(newValue || 0, "deg, ").concat(remaining));
+        onChange("linear-gradient(".concat(newValue || 0, "deg, ").concat(remaining === null || remaining === void 0 ? void 0 : remaining.trim()));
     };
     return (react_1.default.createElement("div", { 
         // className="rbgcp-degree-input-wrap"
         style: __assign(__assign(__assign({}, defaultStyles.rbgcpControlBtnWrapper), defaultStyles.rbgcpControlInputWrap), defaultStyles.rbgcpDegreeInputWrap) },
         react_1.default.createElement(icon_js_1.DegreesIcon, null),
-        react_1.default.createElement("input", { value: degrees, className: "rbgcp-degree-input", onChange: function (e) { return handleDegrees(e); }, 
+        react_1.default.createElement("input", { value: degrees, className: "rbgcp-degree-input", type: "number", min: 0, max: 360, onChange: function (e) { return handleDegrees(e); }, 
             // className="rbgcp-control-input rbgcp-degree-input"
             style: __assign(__assign({}, defaultStyles.rbgcpControlInput), defaultStyles.rbgcpDegreeInput) }),
         react_1.default.createElement("div", { 

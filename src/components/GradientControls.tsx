@@ -16,12 +16,12 @@ const GradientType = () => {
 
   const handleLinear = () => {
     const remaining = value.split(/,(.+)/)[1]
-    onChange(`linear-gradient(90deg, ${remaining}`)
+    onChange(`linear-gradient(90deg, ${remaining?.trim()}`)
   }
 
   const handleRadial = () => {
     const remaining = value.split(/,(.+)/)[1]
-    onChange(`radial-gradient(circle, ${remaining}`)
+    onChange(`radial-gradient(circle, ${remaining?.trim()}`)
   }
 
   return (
@@ -100,7 +100,7 @@ const DegreePicker = () => {
   const handleDegrees = (e: any) => {
     const newValue = formatInputValues(e.target.value, 0, 360)
     const remaining = value.split(/,(.+)/)[1]
-    onChange(`linear-gradient(${newValue || 0}deg, ${remaining}`)
+    onChange(`linear-gradient(${newValue || 0}deg, ${remaining?.trim()}`)
   }
 
   return (
@@ -116,6 +116,9 @@ const DegreePicker = () => {
       <input
         value={degrees}
         className="rbgcp-degree-input"
+        type="number"
+        min={0}
+        max={360}
         onChange={(e) => handleDegrees(e)}
         // className="rbgcp-control-input rbgcp-degree-input"
         style={{
