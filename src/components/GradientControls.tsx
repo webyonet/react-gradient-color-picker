@@ -100,7 +100,7 @@ const DegreePicker = () => {
   const handleDegrees = (e: any) => {
     const newValue = formatInputValues(e.target.value, 0, 360)
     const remaining = value.split(/,(.+)/)[1]
-    onChange(`linear-gradient(${newValue ?? 0}deg, ${remaining}`)
+    onChange(`linear-gradient(${newValue || 0}deg, ${remaining}`)
   }
 
   return (
