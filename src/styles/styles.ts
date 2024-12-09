@@ -1,5 +1,5 @@
-import { darkStyles } from './darkStyles.js';
-import { Styles } from '../shared/types.js';
+import { darkStyles } from './darkStyles.js'
+import { Styles } from '../shared/types.js'
 
 const styles: Styles = {
   body: {
@@ -75,6 +75,9 @@ const styles: Styles = {
     fontSize: '13px',
     background: 'transparent',
   },
+  rbgcpDegreeInput: {
+    width: '53px',
+  },
   rbgcpInputLabel: {
     textAlign: 'center',
     lineHeight: '1.2',
@@ -92,7 +95,7 @@ const styles: Styles = {
     color: 'black',
     fontWeight: 400,
     textAlign: 'center',
-    background: 'transparent'
+    background: 'transparent',
   },
   rbgcpHandle: {
     position: 'absolute',
@@ -176,36 +179,50 @@ const styles: Styles = {
   },
   rbgcpComparibleLabel: {
     color: '#323136',
-  }
-};
+  },
+}
 
-export const getStyles = (disableDarkMode: boolean, disableLightMode: boolean) => {
-  if (typeof window === 'undefined' || disableDarkMode) return styles;
-  if (window.matchMedia("(prefers-color-scheme: dark)").matches || disableLightMode) {
+export const getStyles = (
+  disableDarkMode: boolean,
+  disableLightMode: boolean
+) => {
+  if (typeof window === 'undefined' || disableDarkMode) return styles
+  if (
+    window.matchMedia('(prefers-color-scheme: dark)').matches ||
+    disableLightMode
+  ) {
     const mergedStyles = { ...styles }
     for (const key in darkStyles) {
       if (Object.prototype.hasOwnProperty.call(darkStyles, key)) {
-        (mergedStyles as Record<string, any>)[key] = {
-          ...(Object.prototype.hasOwnProperty.call(mergedStyles, key) ? (mergedStyles as Record<string, any>)[key] : {}),
+        ;(mergedStyles as Record<string, any>)[key] = {
+          ...(Object.prototype.hasOwnProperty.call(mergedStyles, key)
+            ? (mergedStyles as Record<string, any>)[key]
+            : {}),
           ...(darkStyles as Record<string, any>)[key],
-        };
+        }
       }
     }
 
-    return mergedStyles;
-  } 
-  return styles;
-};
+    return mergedStyles
+  }
+  return styles
+}
 
-export const colorTypeBtnStyles = (selected: boolean, styles: Styles): React.CSSProperties => {
+export const colorTypeBtnStyles = (
+  selected: boolean,
+  styles: Styles
+): React.CSSProperties => {
   if (selected) {
-    return {...styles.rbgcpControlBtn, ...styles.rbgcpControlBtnSelected}
+    return { ...styles.rbgcpControlBtn, ...styles.rbgcpControlBtnSelected }
   } else {
     return { ...styles.rbgcpControlBtn }
   }
 }
 
-export const controlBtnStyles = (selected: boolean, styles: Styles): React.CSSProperties => {
+export const controlBtnStyles = (
+  selected: boolean,
+  styles: Styles
+): React.CSSProperties => {
   if (selected) {
     return { ...styles.rbgcpControlIconBtn, ...styles.rbgcpControlBtnSelected }
   } else {
@@ -213,9 +230,16 @@ export const controlBtnStyles = (selected: boolean, styles: Styles): React.CSSPr
   }
 }
 
-export const modalBtnStyles = (selected: boolean, styles: Styles): React.CSSProperties => {
+export const modalBtnStyles = (
+  selected: boolean,
+  styles: Styles
+): React.CSSProperties => {
   if (selected) {
-    return { ...styles.rbgcpControlBtn, ...styles.rbgcpColorModelDropdownBtn, ...styles.rbgcpControlBtnSelected }
+    return {
+      ...styles.rbgcpControlBtn,
+      ...styles.rbgcpColorModelDropdownBtn,
+      ...styles.rbgcpControlBtnSelected,
+    }
   } else {
     return { ...styles.rbgcpControlBtn, ...styles.rbgcpColorModelDropdownBtn }
   }

@@ -87,6 +87,9 @@ var styles = {
         fontSize: '13px',
         background: 'transparent',
     },
+    rbgcpDegreeInput: {
+        width: '53px',
+    },
     rbgcpInputLabel: {
         textAlign: 'center',
         lineHeight: '1.2',
@@ -104,7 +107,7 @@ var styles = {
         color: 'black',
         fontWeight: 400,
         textAlign: 'center',
-        background: 'transparent'
+        background: 'transparent',
     },
     rbgcpHandle: {
         position: 'absolute',
@@ -172,16 +175,20 @@ var styles = {
     },
     rbgcpComparibleLabel: {
         color: '#323136',
-    }
+    },
 };
 var getStyles = function (disableDarkMode, disableLightMode) {
     if (typeof window === 'undefined' || disableDarkMode)
         return styles;
-    if (window.matchMedia("(prefers-color-scheme: dark)").matches || disableLightMode) {
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches ||
+        disableLightMode) {
         var mergedStyles = __assign({}, styles);
         for (var key in darkStyles_js_1.darkStyles) {
             if (Object.prototype.hasOwnProperty.call(darkStyles_js_1.darkStyles, key)) {
-                mergedStyles[key] = __assign(__assign({}, (Object.prototype.hasOwnProperty.call(mergedStyles, key) ? mergedStyles[key] : {})), darkStyles_js_1.darkStyles[key]);
+                ;
+                mergedStyles[key] = __assign(__assign({}, (Object.prototype.hasOwnProperty.call(mergedStyles, key)
+                    ? mergedStyles[key]
+                    : {})), darkStyles_js_1.darkStyles[key]);
             }
         }
         return mergedStyles;

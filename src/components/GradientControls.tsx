@@ -131,7 +131,7 @@ const DegreePicker = () => {
         style={{
           ...defaultStyles.rbgcpDegreeIcon,
           position: 'absolute',
-          right: degrees > 99 ? 0 : degrees < 10 ? 7 : 3,
+          right: degrees > 99 ? 19 : degrees < 10 ? 26 : 23,
           top: 1,
           fontWeight: 400,
           fontSize: 13,
@@ -199,7 +199,7 @@ const GradientControls = ({
       // className="rbgcp-gradient-controls-wrap"
     >
       {!hideGradientType && <GradientType />}
-      <div style={{ width: 53 }}>
+      <div style={{ width: 75 }}>
         {!hideGradientAngle && gradientType === 'linear-gradient' && (
           <DegreePicker />
         )}

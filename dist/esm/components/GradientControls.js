@@ -67,7 +67,7 @@ var DegreePicker = function () {
             style: __assign(__assign({}, defaultStyles.rbgcpControlInput), defaultStyles.rbgcpDegreeInput) }),
         React.createElement("div", { 
             // className="rbgcp-degree-circle-icon"
-            style: __assign(__assign({}, defaultStyles.rbgcpDegreeIcon), { position: 'absolute', right: degrees > 99 ? 0 : degrees < 10 ? 7 : 3, top: 1, fontWeight: 400, fontSize: 13 }) }, "\u00B0")));
+            style: __assign(__assign({}, defaultStyles.rbgcpDegreeIcon), { position: 'absolute', right: degrees > 99 ? 19 : degrees < 10 ? 26 : 23, top: 1, fontWeight: 400, fontSize: 13 }) }, "\u00B0")));
 };
 var DeleteBtn = function () {
     var _a = usePicker(), colors = _a.colors, selectedColor = _a.selectedColor, createGradientStr = _a.createGradientStr, defaultStyles = _a.defaultStyles;
@@ -90,7 +90,7 @@ var GradientControls = function (_a) {
     var _b = usePicker(), gradientType = _b.gradientType, defaultStyles = _b.defaultStyles;
     return (React.createElement("div", { style: __assign(__assign({}, defaultStyles.rbgcpControlBtnWrapper), { marginTop: 12, marginBottom: -4, justifyContent: 'space-between', paddingLeft: hideGradientType ? 4 : 0 }), className: "rbgcp-gradient-controls-wrap" },
         !hideGradientType && React.createElement(GradientType, null),
-        React.createElement("div", { style: { width: 53 } }, !hideGradientAngle && gradientType === 'linear-gradient' && (React.createElement(DegreePicker, null))),
+        React.createElement("div", { style: { width: 75 } }, !hideGradientAngle && gradientType === 'linear-gradient' && (React.createElement(DegreePicker, null))),
         !hideGradientStop && React.createElement(StopPicker, null),
         React.createElement(DeleteBtn, null)));
 };
