@@ -101,9 +101,12 @@ var AdvBar = function (_a) {
                 onMouseMove: function (e) { return handleMove(e); }, onClick: function (e) { return handleClick(e); }, tabIndex: 0, role: "button", onKeyDown: function () {
                     return;
                 } }, label),
-            react_1.default.createElement("canvas", { ref: reffy, height: "14px", width: "".concat(squareWidth, "px"), onClick: function (e) { return handleClick(e); }, 
+            react_1.default.createElement("canvas", { ref: reffy, 
+                // height="14px"
+                // width={`${squareWidth}px`}
+                onClick: function (e) { return handleClick(e); }, 
                 // className="rbgcp-advanced-bar-canvas"
-                style: { position: 'relative', borderRadius: 14 } }))));
+                style: { position: 'relative', borderRadius: 14, width: '100%', height: 14 } }))));
 };
 var AdvancedControls = function (_a) {
     var openAdvanced = _a.openAdvanced;

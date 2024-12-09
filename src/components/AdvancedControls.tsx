@@ -103,11 +103,11 @@ const AdvBar = ({
         </div>
         <canvas
           ref={reffy}
-          height="14px"
-          width={`${squareWidth}px`}
+          // height="14px"
+          // width={`${squareWidth}px`}
           onClick={(e) => handleClick(e)}
           // className="rbgcp-advanced-bar-canvas"
-          style={{ position: 'relative', borderRadius: 14 }}
+          style={{ position: 'relative', borderRadius: 14, width: '100%', height: 14 }}
         />
       </div>
     </div>
