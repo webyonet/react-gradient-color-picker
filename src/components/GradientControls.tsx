@@ -83,6 +83,7 @@ const StopPicker = () => {
       <input
         value={currentLeft}
         className="rbgcp-stop-input"
+        type="number"
         onChange={(e) => handleMove(e.target.value)}
         style={{
           ...defaultStyles.rbgcpControlInput,

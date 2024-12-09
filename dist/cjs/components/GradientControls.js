@@ -77,7 +77,7 @@ var StopPicker = function () {
         // className="rbgcp-stop-input-wrap"
         style: __assign(__assign(__assign(__assign({}, defaultStyles.rbgcpControlBtnWrapper), defaultStyles.rbgcpControlInputWrap), defaultStyles.rbgcpStopInputWrap), { paddingLeft: 8 }) },
         react_1.default.createElement(icon_js_1.StopIcon, null),
-        react_1.default.createElement("input", { value: currentLeft, className: "rbgcp-stop-input", onChange: function (e) { return handleMove(e.target.value); }, style: __assign(__assign({}, defaultStyles.rbgcpControlInput), defaultStyles.rbgcpStopInput) })));
+        react_1.default.createElement("input", { value: currentLeft, className: "rbgcp-stop-input", type: "number", onChange: function (e) { return handleMove(e.target.value); }, style: __assign(__assign({}, defaultStyles.rbgcpControlInput), defaultStyles.rbgcpStopInput) })));
 };
 var DegreePicker = function () {
     var _a = (0, context_js_1.usePicker)(), degrees = _a.degrees, onChange = _a.onChange, value = _a.value, defaultStyles = _a.defaultStyles;
