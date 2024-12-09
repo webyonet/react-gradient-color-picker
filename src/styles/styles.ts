@@ -78,6 +78,9 @@ const styles: Styles = {
   rbgcpDegreeInput: {
     width: '53px',
   },
+  rbgcpStopInput: {
+    width: '53px',
+  },
   rbgcpInputLabel: {
     textAlign: 'center',
     lineHeight: '1.2',
